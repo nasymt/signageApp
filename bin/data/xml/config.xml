@@ -1,20 +1,19 @@
-<color>
-<r>255</r>
-<g>0</g>
-<b>0</b>
-</color>
-
 <config>
 	<videoPath>"fingers.mov"</videoPath>
 
 	<!-- 親の場合は1,子の場合は0 -->
-	<host>0</host>
+	<host>1</host>
 
 	<!-- IPアドレス -->
 	<ipAdress>"127.0.0.1"</ipAdress>
 
+	<!-- ポート -->
+	<port>9000</port>
+
 	<!-- 音あり:1 音なし:0 -->
 	<sound>1</sound>
+
+
 
 
 </config>
