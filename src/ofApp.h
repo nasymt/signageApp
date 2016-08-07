@@ -8,7 +8,7 @@
 /*-------OSC---------*/
 #define RECEIVER_PORT 9000
 #define SENDER_PORT 9001
-#define HOST "localhost"
+#define HOST "192.168.11.6"
 
 
 class ofApp : public ofBaseApp{

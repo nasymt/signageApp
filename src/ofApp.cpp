@@ -29,7 +29,8 @@ void ofApp::setup(){
     cout << "host ? " << isHost << endl;
     
 //    video.load(videoPath);
-    video.load("352x240.mp4");
+//    video.load("352x240.mp4");
+    video.load("fingers.mov");
     video.play();
     
     video_duration = video.getDuration();
@@ -42,7 +43,8 @@ void ofApp::setup(){
     // OSC
     //-----------------------------------
     receiver.setup(RECEIVER_PORT);
-    sender.setup(adress, SENDER_PORT);
+//    sender.setup(adress, SENDER_PORT);
+    sender.setup(HOST , SENDER_PORT);
     
 }
 
@@ -50,14 +52,16 @@ void ofApp::setup(){
 void ofApp::update(){
     video.update();
 //    cout << video.getCurrentFrame() << endl;
-    
+    int nowPos = video.getCurrentFrame();
+    cout << nowPos << " : " << video.getTotalNumFrames() <<endl;
     if (isHost){
         
-        if ( video_duration <= 2 ){
+        if ( nowPos <= 10 ){
             ofxOscMessage m;
             m.setAddress("/video/play");
             m.addBoolArg(true);
             sender.sendMessage(m,false);
+            cout << "send Play" << endl;
         }
         
     } else {
