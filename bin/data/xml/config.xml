@@ -2,18 +2,21 @@
 	<videoPath>"fingers.mov"</videoPath>
 
 	<!-- 親の場合は1,子の場合は0 -->
-	<host>1</host>
+	<host>0</host>
+
+	<!-- クライアントPCの数 -->
+	<num>4</num>
 
 	<!-- IPアドレス -->
-	<ipAdress>"127.0.0.1"</ipAdress>
+	<ipAddress>"192.168.11.201"</ipAddress>
+	<ipAddress>"192.168.11.202"</ipAddress>
+	<ipAddress>"192.168.11.203"</ipAddress>
+	<ipAddress>"192.168.11.204"</ipAddress>
 
 	<!-- ポート -->
 	<port>9000</port>
 
-	<!-- 音あり:1 音なし:0 -->
-	<sound>1</sound>
-
-
-
+	<!-- 音ミュート:1 ミュートなし:0 -->
+	<mute>1</mute>
 
 </config>

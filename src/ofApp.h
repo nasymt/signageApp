@@ -1,14 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-
 #include "ofxOsc.h"
 #include "ofxXmlSettings.h"
-
-/*-------OSC---------*/
-#define RECEIVER_PORT 9000
-#define SENDER_PORT 9001
-#define HOST "192.168.11.6"
 
 
 class ofApp : public ofBaseApp{
@@ -33,6 +27,9 @@ public:
     bool isHost;
     int resetTime;
     bool isPlaying;
+    int clientNum;
+    int port;
     
+    vector<string> clientIpAddress;
     
 };
